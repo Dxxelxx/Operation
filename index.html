@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Flexbox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* Header - Content - Footer */
+      min-height: 100vh;     /* ocupa toda la pantalla */
+    }
+
+    header {
+      background-color: lightcoral; /* rojo */
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex; /* Navbar a la izquierda y Body a la derecha */
+      flex: 1;       /* ocupa el espacio disponible */
+    }
+
+    nav {
+      background-color: violet; /* morado */
+      padding: 20px;
+      width: 200px; /* ancho fijo de la barra lateral */
+      color: white;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    nav a {
+      display: block;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    main {
+      background-color: lightgreen; /* verde */
+      padding: 20px;
+      flex: 1; /* ocupa todo el espacio sobrante */
+    }
+
+    footer {
+      background-color: lightblue; /* celeste */
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+
+    <div class="content">
+      <nav>
+        <a href="productos.html">Productos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contactos.html">Contactos</a>
+      </nav>
+      <main>
+        <h2>Bienvenido</h2>
+        <p>Selecciona una opción del menú lateral.</p>
+      </main>
+    </div>
+
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
