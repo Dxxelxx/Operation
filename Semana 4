@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Estilo Imagen</title>
+    <style>
+        /* Reinicio Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            display: flex; /* <-- Importante para centrar o controlar el layout principal */
+            min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la ventana */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Header, Content y Footer se apilan verticalmente */
+            flex: 1; /* Permite que el contenedor ocupe todo el ancho disponible */
+        }
+
+        header {
+            background-color: lightcoral; /* Color rojo */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .content-area {
+            display: flex; /* Navbar y Body-Content se distribuyen horizontalmente */
+            flex: 1; /* Ocupa el espacio vertical restante entre Header y Footer */
+        }
+
+        nav {
+            background-color: purple; /* ¡Navbar de color morado! */
+            padding: 20px;
+            width: 200px; /* Ancho fijo para el Navbar */
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            display: flex; /* Para centrar el texto verticalmente si es necesario */
+            align-items: center; /* Centra verticalmente el texto "Navbar" */
+            justify-content: center; /* Centra horizontalmente el texto "Navbar" */
+        }
+
+        .main-body {
+            background-color: lightgreen; /* Color verde para el Body */
+            flex: 1; /* Ocupa el espacio horizontal restante junto al Navbar */
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            display: flex; /* Para centrar el texto verticalmente si es necesario */
+            align-items: center; /* Centra verticalmente el texto "Body" */
+            justify-content: center; /* Centra horizontalmente el texto "Body" */
+        }
+
+        footer {
+            background-color: lightblue; /* Color azul para el Footer */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            Header
+        </header>
+
+        <div class="content-area">
+            <nav>
+                Navbar
+            </nav>
+            <main class="main-body">
+                Body
+            </main>
+        </div>
+
+        <footer>
+            Footer
+        </footer>
+    </div>
+</body>
+</html>
